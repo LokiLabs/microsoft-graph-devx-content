@@ -1384,6 +1384,15 @@
         "skipTest": false
     },
     {
+        "id": "42d854f7-1c9b-4a6e-98de-03bdb2a27d7f",
+        "category": "Microsoft Teams",
+        "method": "GET",
+        "humanName": "list teamsApp",
+        "requestUrl": "/v1.0/appCatalogs/teamsApps",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/appcatalogs-list-teamsapps?view=graph-rest-1.0&tabs=http",
+        "skipTest": false
+    },
+    {
         "id": "859ae3c4-aee0-4b77-a957-358bb75d3159",
         "category": "Microsoft Teams",
         "method": "GET",
