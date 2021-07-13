@@ -1438,7 +1438,7 @@
         "category": "Microsoft Teams (beta)",
         "method": "GET",
         "humanName": "apps installed for user",
-        "requestUrl": "/beta/users/{my-id}/teamwork/installedApps?$expand=teamsApp",
+        "requestUrl": "/beta/me/teamwork/installedApps?$expand=teamsApp",
         "docLink": "https://docs.microsoft.com/en-us/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http",
         "tip": "This query requires a user id. To find user id, you can run: GET https://graph.microsoft.com/v1.0/users",
         "skipTest": false
