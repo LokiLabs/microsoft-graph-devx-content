@@ -2981,5 +2981,8 @@
         "tip": "Please enable the WindowsUpdates.ReadWrite.All permission to use this query.",
         "skipTest": false
     }
+  ],
+  "TeamsAppSampleQueries": [
+      
   ]
 }
