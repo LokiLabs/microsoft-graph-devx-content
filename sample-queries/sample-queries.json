@@ -2983,6 +2983,15 @@
     }
   ],
   "TeamsAppSampleQueries": [
-      
+    {
+        "id": "44a072cc-c5c6-40f2-ab21-e7b0c417bb00",
+        "category": "Microsoft Teams",
+        "method": "GET",
+        "humanName": "channels of a team which I am member of",
+        "requestUrl": "/v1.0/teams/{team-id}/channels",
+        "docLink": "https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/channel_list",
+        "tip": "This query requires a team id.  To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams",
+        "skipTest": false
+    }
   ]
 }
