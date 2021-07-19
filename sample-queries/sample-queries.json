@@ -2966,7 +2966,7 @@
     },
     {
         "id": "76313b13-2306-4b9f-9231-999c103dc208",
-        "category": "Windows Updates",
+        "category": "Omer Changes",
         "method": "POST",
         "humanName": "unenroll from feature update management",
         "requestUrl": "/beta/admin/windows/updates/updatableAssets/unenrollAssets",
