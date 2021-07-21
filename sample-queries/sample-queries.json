@@ -2970,6 +2970,12 @@
         "method": "POST",
         "humanName": "unenroll from feature update management",
         "requestUrl": "/beta/admin/windows/updates/updatableAssets/unenrollAssets",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
         "docLink": "https://docs.microsoft.com/graph/api/windowsupdates-updatableasset-unenrollassets?view=graph-rest-beta",
         "postBody": "{\r\n    \"updateCategory\": \"feature\",\r\n    \"assets\": [\r\n        {\r\n            \"@odata.type\": \"#microsoft.graph.windowsUpdates.azureADDevice\",\r\n            \"id\": \"{azureAdDeviceId}\"\r\n        }\r\n    ]\r\n}",
         "tip": "Please enable the WindowsUpdates.ReadWrite.All permission to use this query.",
