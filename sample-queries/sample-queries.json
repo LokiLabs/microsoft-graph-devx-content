@@ -3025,7 +3025,7 @@
         },
         {
             "id": "a748f894-bb43-4585-8a34-cc093d91c946",
-            "category": "Microsoft Teams",
+            "category": "Microsoft Teams (beta)",
             "method": "GET",
             "humanName": "tabs in a channel",
             "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}/tabs?$expand=teamsApp",
@@ -3035,7 +3035,7 @@
         },
         {
             "id": "428bde00-a605-42cc-90b3-e2b50c359c70",
-            "category": "Microsoft Teams",
+            "category": "Microsoft Teams (beta)",
             "method": "GET",
             "humanName": "apps in a team",
             "requestUrl": "/beta/teams/{team-id}/installedApps?$expand=teamsAppDefinition",
@@ -3045,7 +3045,7 @@
         },
         {
             "id": "4c676bb1-c267-4a96-ac05-91d3db93b8ee",
-            "category": "Microsoft Teams",
+            "category": "Microsoft Teams (beta)",
             "method": "GET",
             "humanName": "list resource-specific permission grants on a team",
             "requestUrl": "/beta/teams/{team-id}/permissionGrants",
