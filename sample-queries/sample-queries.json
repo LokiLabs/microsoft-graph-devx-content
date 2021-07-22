@@ -2983,15 +2983,15 @@
     }
   ],
   "TeamsAppSampleQueries": [
-      {
-                "id": "da59a1e1-4979-485e-a128-44f28d6d67ac",
-                "category": "Microsoft Teams",
-                "method": "GET",
-                "humanName": "get list of members in team",
-                "requestUrl": "/v1.0/teams/{team-id}/members",
-                "docLink": "https://docs.microsoft.com/en-us/graph/api/team-list-members?view=graph-rest-1.0&tabs=http",
-                "tip": "This query requires a team id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. Also ensure that the TeamMember.Read.Group permission is in your manifest.json.",
-                "skipTest": false
-      }
+    {
+        "id": "da59a1e1-4979-485e-a128-44f28d6d67ac",
+        "category": "Microsoft Teams",
+        "method": "GET",
+        "humanName": "get list of members in team",
+        "requestUrl": "/v1.0/teams/{team-id}/members",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/team-list-members?view=graph-rest-1.0&tabs=http",
+        "tip": "This query requires a team id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams.",
+        "skipTest": false
+    }
   ]
 }
