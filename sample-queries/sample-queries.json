@@ -3015,13 +3015,40 @@
         },
         {
             "id": "fe15123a-507a-45d8-aa29-e5b25f5c0ac7",
-            "category": "Microsoft Teams",
+            "category": "Microsoft Teams (beta)",
             "method": "GET",
             "humanName": "list channel messages",
             "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}/messages",
             "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-list-messages?view=graph-rest-beta&tabs=http",
             "tip": "This query requires a team id and a channel id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. To find the channel id of channels you belong to, stay in user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/teams/{team-id}/channels.",
             "skipTest": false
+        },
+        {
+            "id": "202c5ea9-433f-43d9-8246-334d294f978b",
+            "category": "Microsoft Teams (beta)",
+            "method": "PATCH",
+            "humanName": "update channel",
+            "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}",
+            "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-patch?view=graph-rest-beta",
+            "headers": [
+                {
+                    "name": "Content-type",
+                    "value": "application/json"
+                }
+            ],
+            "postBody": "{\r\n        \"description\": \"An updated channel description!\"\r\n    }",
+            "tip": "This query requires a team id, channel id, and a request body. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. To find the channel id of channels you belong to, stay in user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/teams/{team-id}/channels.",
+            "skipTest": false 
+        },
+        {
+            "id": "4a8fb118-f650-4efc-b109-d5dd4b3e9922",
+            "category": "Microsoft Teams (beta)",
+            "method": "DELETE",
+            "humanName": "delete channel",
+            "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}",
+            "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-delete?view=graph-rest-beta",
+            "tip": "This query requires a team id and a channel id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. To find the channel id of channels you belong to, stay in user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/teams/{team-id}/channels.",
+            "skipTest": false
         }
-  ]
+    ]
 }
