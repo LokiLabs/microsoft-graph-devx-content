@@ -2998,6 +2998,13 @@
         ],
         "postBody": "{\r\n   \"displayName\": \"Architecture Discussion\",\r\n   \"description\": \"This channel is where we debate all future architecture plans\"\r\n }",
         "tip": "This query requires a team id.  To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams .",
+        "id": "44a072cc-c5c6-40f2-ab21-e7b0c417bb00",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "channels of a team which I am member of",
+        "requestUrl": "/beta/teams/{team-id}/channels",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-list?view=graph-rest-beta",
+        "tip": "This query requires a team id.  To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams",
         "skipTest": false
     },
     {
@@ -3038,6 +3045,36 @@
         "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}/messages",
         "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-list-messages?view=graph-rest-beta&tabs=http",
         "tip": "This query requires a team id and a channel id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. To find the channel id of channels you belong to, stay in user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/teams/{team-id}/channels.",
+        "skipTest": false
+    },
+    {
+        "id": "a748f894-bb43-4585-8a34-cc093d91c946",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "tabs in a channel",
+        "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}/tabs?$expand=teamsApp",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-list-tabs?view=graph-rest-beta&tabs=http",
+        "tip": "This query requires a team id and a channel id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. To find the channel id of channels you belong to, stay in user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/teams/{team-id}/channels.",
+        "skipTest": false
+    },
+    {
+        "id": "428bde00-a605-42cc-90b3-e2b50c359c70",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "apps in a team",
+        "requestUrl": "/beta/teams/{team-id}/installedApps?$expand=teamsAppDefinition",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http",
+        "tip": "This query requires a team id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams.",
+        "skipTest": false
+    },
+    {
+        "id": "4c676bb1-c267-4a96-ac05-91d3db93b8ee",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "list resource-specific permission grants on a team",
+        "requestUrl": "/beta/teams/{team-id}/permissionGrants",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/team-list-permissiongrants?view=graph-rest-beta&tabs=http",
+        "tip": "This query requires a team id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams.",
         "skipTest": false
     }
   ]
