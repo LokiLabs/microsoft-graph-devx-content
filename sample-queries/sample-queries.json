@@ -2997,7 +2997,9 @@
             }
         ],
         "postBody": "{\r\n   \"displayName\": \"Architecture Discussion\",\r\n   \"description\": \"This channel is where we debate all future architecture plans\"\r\n }",
-        "tip": "This query requires a team id.  To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams .",
+        "tip": "This query requires a team id.  To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams ."
+    },
+    {
         "id": "44a072cc-c5c6-40f2-ab21-e7b0c417bb00",
         "category": "Microsoft Teams (beta)",
         "method": "GET",
