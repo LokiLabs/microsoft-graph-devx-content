@@ -3025,7 +3025,7 @@
     },
     {
         "id": "fe15123a-507a-45d8-aa29-e5b25f5c0ac7",
-        "category": "Microsoft Teams",
+        "category": "Microsoft Teams (beta)",
         "method": "GET",
         "humanName": "list channel messages",
         "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}/messages",
