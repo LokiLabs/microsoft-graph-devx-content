@@ -3148,7 +3148,7 @@
     }
     {
         "id": "eb9b7f19-491b-423f-a821-9975615022a4",
-        "category": "Microsoft Teams",
+        "category": "Microsoft Teams (beta)",
         "method": "GET",
         "humanName": "chat info",
         "requestUrl": "/beta/chats/{chat-id}",
@@ -3158,7 +3158,7 @@
     },
     {
         "id": "acc823bc-f501-4cce-9441-06cbfa2f2884",
-        "category": "Microsoft Teams",
+        "category": "Microsoft Teams (beta)",
         "method": "GET",
         "humanName": "chat messages",
         "requestUrl": "/beta/chats/{chat-id}/messages",
