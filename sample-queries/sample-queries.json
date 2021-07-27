@@ -2984,6 +2984,22 @@
   ],
   "TeamsAppSampleQueries": [
     {
+        "id": "9d9dc771-9926-4e41-b2e9-26159bb80c85",
+        "category": "Microsoft Teams (beta)",
+        "method": "POST",
+        "humanName": "create channel",
+        "requestUrl": "/beta/teams/{team-id}/channels",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-post?view=graph-rest-beta",
+         "headers": [
+              {
+                  "name": "Content-type",
+                  "value": "application/json"
+              }
+          ],
+        "postBody": "{\r\n   \"displayName\": \"Architecture Discussion\",\r\n   \"description\": \"This channel is where we debate all future architecture plans\"\r\n }",
+        "tip": "This query requires a team id.  To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams."
+    },
+    {
         "id": "3142bf45-6ab7-4008-a2a4-3c7555773cef",
         "category": "Microsoft Teams (beta)",
         "method": "GET",
