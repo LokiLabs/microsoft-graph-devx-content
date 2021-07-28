@@ -3145,7 +3145,7 @@
         "docLink": "https://docs.microsoft.com/en-us/graph/api/team-list-permissiongrants?view=graph-rest-beta&tabs=http",
         "tip": "This query requires a team id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams.",
         "skipTest": false
-    }
+    },
     {
         "id": "eb9b7f19-491b-423f-a821-9975615022a4",
         "category": "Microsoft Teams (beta)",
