@@ -1481,7 +1481,7 @@
                 "value": "application/json"
             }
         ],
-        "postBody": "{\r\n    \"topic\": {\r\n    \"source\": \"entityUrl\",\r\n    \"value\": \"https://graph.microsoft.com/v1.0/teams/{teams-id}\"\r\n    },\r\n    \"activityType\": \"pendingFinanceApprovalRequests\",\r\n    \"previewText\": {\r\n    \"content\": \"Test activity feed notification from Graph Explorer\"\r\n    },\r\n    \"recipient\": {\r\n    \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n    \"userId\": \"{recipient-user-id}\"\r\n    },\r\n    \"templateParameters\": [\r\n    {\r\n    \"name\": \"pendingRequestCount\",\r\n    \"value\": \"5\"\r\n    }\r\n    ]\r\n    }",
+        "postBody": "{\r\n    \"topic\": {\r\n    \"source\": \"entityUrl\",\r\n    \"value\": \"https://graph.microsoft.com/v1.0/teams/{teams-id}\"\r\n    },\r\n    \"activityType\": \"graphExplorerSampleNotification\",\r\n    \"previewText\": {\r\n    \"content\": \"Test activity feed notification from Graph Explorer\"\r\n    },\r\n    \"recipient\": {\r\n    \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n    \"userId\": \"{recipient-user-id}\"\r\n    }\r\n      }",
         "tip": "This query requires a teams id and a recipient's user id. To find the team id, you can run: GET https://graph.microsoft.com/v1.0/me/joinedTeams . To find a user's id, you can run: 1) GET https://graph.microsoft.com/v1.0/me/ or 2) GET https://graph.microsoft.com/v1.0/users . Both the sender and the recipient of the notification must also have the Sample Teams app installed.",
         "skipTest": false
     },
@@ -2979,6 +2979,151 @@
         "docLink": "https://docs.microsoft.com/graph/api/windowsupdates-updatableasset-unenrollassets?view=graph-rest-beta",
         "postBody": "{\r\n    \"updateCategory\": \"feature\",\r\n    \"assets\": [\r\n        {\r\n            \"@odata.type\": \"#microsoft.graph.windowsUpdates.azureADDevice\",\r\n            \"id\": \"{azureAdDeviceId}\"\r\n        }\r\n    ]\r\n}",
         "tip": "Please enable the WindowsUpdates.ReadWrite.All permission to use this query.",
+        "skipTest": false
+    }
+  ],
+  "TeamsAppSampleQueries": [
+    {
+        "id": "9d9dc771-9926-4e41-b2e9-26159bb80c85",
+        "category": "Microsoft Teams (beta)",
+        "method": "POST",
+        "humanName": "create channel",
+        "requestUrl": "/beta/teams/{team-id}/channels",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-post?view=graph-rest-beta",
+         "headers": [
+              {
+                  "name": "Content-type",
+                  "value": "application/json"
+              }
+          ],
+        "postBody": "{\r\n   \"displayName\": \"Architecture Discussion\",\r\n   \"description\": \"This channel is where we debate all future architecture plans\"\r\n }",
+        "tip": "This query requires a team id.  To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams."
+    },
+    {
+        "id": "fece537d-55e0-42d2-bcfd-e71674322967",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "app installations within a chat",
+        "requestUrl": "/beta/chats/{chat-id}/installedApps",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/chat-list-installedapps?view=graph-rest-beta&tabs=http",
+        "tip": "This query requires a chat id. To find the chat ids, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/me/chats/",
+        "skipTest": false
+    },
+    {
+        "id": "da59a1e1-4979-485e-a128-44f28d6d67ac",
+        "category": "Microsoft Teams",
+        "method": "GET",
+        "humanName": "list of members in team",
+        "requestUrl": "/v1.0/teams/{team-id}/members",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/team-list-members?view=graph-rest-1.0&tabs=http",
+        "tip": "This query requires a team id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams.",
+        "skipTest": false
+    },
+    {
+        "id": "202c5ea9-433f-43d9-8246-334d294f978b",
+        "category": "Microsoft Teams (beta)",
+        "method": "PATCH",
+        "humanName": "update channel",
+        "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-patch?view=graph-rest-beta",
+        "headers": [
+            {
+                "name": "Content-type",
+                "value": "application/json"
+            }
+        ],
+        "postBody": "{\r\n        \"description\": \"An updated channel description!\"\r\n    }",
+        "tip": "This query requires a team id, channel id, and a request body. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. To find the channel id of channels you belong to, stay in user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/teams/{team-id}/channels.",
+        "skipTest": false 
+    },
+    {
+        "id": "4a8fb118-f650-4efc-b109-d5dd4b3e9922",
+        "category": "Microsoft Teams (beta)",
+        "method": "DELETE",
+        "humanName": "delete channel",
+        "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-delete?view=graph-rest-beta",
+        "tip": "This query requires a team id and a channel id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. To find the channel id of channels you belong to, stay in user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/teams/{team-id}/channels.",
+        "skipTest": false
+    },
+    {
+        "id": "44a072cc-c5c6-40f2-ab21-e7b0c417bb00",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "channels of a team which I am member of",
+        "requestUrl": "/beta/teams/{team-id}/channels",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-list?view=graph-rest-beta",
+        "tip": "This query requires a team id.  To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams",
+        "skipTest": false
+    },
+    {
+        "id": "3142bf45-6ab7-4008-a2a4-3c7555773cef",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "resource-specific permissions in chat",
+        "requestUrl": "/beta/chats/{chat-id}/permissionGrants",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/chat-list-permissiongrants?view=graph-rest-beta&tabs=http",
+        "tip": "This query requires a chat id. To find the chat ids, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/me/chats/",
+        "skipTest": false
+    },
+    {
+        "id": "fe15123a-507a-45d8-aa29-e5b25f5c0ac7",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "list channel messages",
+        "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}/messages",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-list-messages?view=graph-rest-beta&tabs=http",
+        "tip": "This query requires a team id and a channel id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. To find the channel id of channels you belong to, stay in user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/teams/{team-id}/channels.",
+        "skipTest": false
+    },
+    {
+        "id": "a748f894-bb43-4585-8a34-cc093d91c946",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "tabs in a channel",
+        "requestUrl": "/beta/teams/{team-id}/channels/{channel-id}/tabs?$expand=teamsApp",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/channel-list-tabs?view=graph-rest-beta&tabs=http",
+        "tip": "This query requires a team id and a channel id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams. To find the channel id of channels you belong to, stay in user (delegated permissions) mode and run: GET https://graph.microsoft.com/beta/teams/{team-id}/channels.",
+        "skipTest": false
+    },
+    {
+        "id": "428bde00-a605-42cc-90b3-e2b50c359c70",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "apps in a team",
+        "requestUrl": "/beta/teams/{team-id}/installedApps?$expand=teamsAppDefinition",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http",
+        "tip": "This query requires a team id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams.",
+        "skipTest": false
+    },
+    {
+        "id": "4c676bb1-c267-4a96-ac05-91d3db93b8ee",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "list resource-specific permission grants on a team",
+        "requestUrl": "/beta/teams/{team-id}/permissionGrants",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/team-list-permissiongrants?view=graph-rest-beta&tabs=http",
+        "tip": "This query requires a team id. To find the team id of teams you belong to, you can switch to user (delegated permissions) mode and run: GET https://graph.microsoft.com/v1.0/me/joinedTeams.",
+        "skipTest": false
+    },
+    {
+        "id": "eb9b7f19-491b-423f-a821-9975615022a4",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "chat info",
+        "requestUrl": "/beta/chats/{chat-id}",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/chat-get?view=graph-rest-beta",
+        "tip": "This query requires a chat id. To find a list of chats and their corresponding ids, run GET https://graph.microsoft.com/beta/me/chats/",
+        "skipTest": false
+    },
+    {
+        "id": "acc823bc-f501-4cce-9441-06cbfa2f2884",
+        "category": "Microsoft Teams (beta)",
+        "method": "GET",
+        "humanName": "chat messages",
+        "requestUrl": "/beta/chats/{chat-id}/messages",
+        "docLink": "https://docs.microsoft.com/en-us/graph/api/chat-get?view=graph-rest-beta",
+        "tip": "This query requires a chat id. To find a list of chats and their corresponding ids, run GET https://graph.microsoft.com/beta/me/chats/",
         "skipTest": false
     }
   ]
